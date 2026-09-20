@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    background-color: #1a0b12;
+    color: white;
+    font-family: 'Marck Script', cursive;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.title {
+    font-family: 'Marck Script', cursive;
+    font-size: 36px;
+    color: #ff4d6d;
+    text-align: center;
+    text-shadow: 0 0 25px rgba(255, 77, 109, 0.9);
+    margin-bottom: 30px;
+}
+
+.question-block {
+    display: none;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.question-block.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.question-label {
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
+    color: #ff7e9d;
+    margin-bottom: 10px;
+}
+
+.answer-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    outline: none;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.answer-input:focus {
+    border-color: #ff4d6d;
+}
+
+.answer-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-submit {
+    background: linear-gradient(90deg, #ff7e9d, #ff4d6d);
+    border: none;
+    padding: 18px 40px;
+    border-radius: 30px;
+    color: white;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(255, 77, 109, 0.8);
+    transition: transform 0.2s, opacity 0.3s;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.btn-submit:active {
+    transform: scale(0.95);
+}
+
+.btn-submit.hidden {
+    display: none;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.success-message.visible {
+    display: block;
+}
+
+.success-emoji {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.success-text {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    color: #ff7e9d;
+}

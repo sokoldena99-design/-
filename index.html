@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#1a0b12">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>Вопросы</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Marck+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">Ответь на вопросы 😊</h1>
+
+        <form id="quiz-form" action="https://formspree.io/f/mqpappbj" method="POST">
+            
+            <!-- Питання 1 -->
+            <div class="question-block active" data-question="0">
+                <label class="question-label">Как дела?</label>
+                <input type="text" name="how_are_you" class="answer-input" placeholder="Напиши..." autocomplete="off">
+            </div>
+
+            <!-- Питання 2 -->
+            <div class="question-block" data-question="1">
+                <label class="question-label">Как настроение?</label>
+                <input type="text" name="mood" class="answer-input" placeholder="Напиши..." autocomplete="off">
+            </div>
+
+            <!-- Питання 3 -->
+            <div class="question-block" data-question="2">
+                <label class="question-label">Чем занимаешься?</label>
+                <input type="text" name="what_doing" class="answer-input" placeholder="Напиши..." autocomplete="off">
+            </div>
+
+            <!-- Питання 4 -->
+            <div class="question-block" data-question="3">
+                <label class="question-label">Как прошёл день?</label>
+                <input type="text" name="how_day" class="answer-input" placeholder="Напиши..." autocomplete="off">
+            </div>
+
+            <!-- Питання 5 -->
+            <div class="question-block" data-question="4">
+                <label class="question-label">Как самочувствие?</label>
+                <input type="text" name="health" class="answer-input" placeholder="Напиши..." autocomplete="off">
+            </div>
+
+            <!-- Питання 6 -->
+            <div class="question-block" data-question="5">
+                <label class="question-label">Что делаешь?</label>
+                <input type="text" name="what_doing_now" class="answer-input" placeholder="Напиши..." autocomplete="off">
+            </div>
+
+            <button type="button" id="btn-next" class="btn-submit">Дальше</button>
+        </form>
+
+        <div id="success-message" class="success-message">
+            <div class="success-emoji">❤️</div>
+            <div class="success-text">Спасибо! Ты лучшая!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
